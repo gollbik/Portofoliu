@@ -9,7 +9,7 @@ interface ExperienceInfoProps {
 const ExperienceInfo = ({ mainTitle, experiences }: ExperienceInfoProps) => {
   return (
     <div className="flex flex-col gap-y-5">
-      <h2 className="font-bold text-3xl mt-10 mb-10 text-[rgb(125,96,208)]">
+      <h2 className="font-bold sm:text-3xl text-2xl mt-10 mb-10 text-[rgb(125,96,208)]">
         {mainTitle}
       </h2>
       {experiences.map((exp) => (

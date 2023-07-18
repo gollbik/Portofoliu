@@ -92,7 +92,7 @@ const cardData = [
 
 const ProjectCards = () => {
   return (
-    <div className="grid grid-cols-1 gap-x-12 md:grid-cols-2 lg:grid-cols-3 mt-28 gap-y-16 ">
+    <div className="grid grid-cols-1 gap-x-12 md:grid-cols-2 lg:grid-cols-3 sm:mt-28 mt-20 gap-y-16 ">
       {cardData.map((card) => (
         <div key={card.id} className="card w-96 bg-base-100 shadow-xl">
           <figure>
@@ -104,13 +104,15 @@ const ProjectCards = () => {
             />
           </figure>
           <div className="card-body ">
-            <h2 className="text-center text-2xl  tracking-wider mt-">
+            <h2 className="text-center sm:text-2xl text-xl  tracking-wider mt-">
               {card.title}
             </h2>
-            <p className=" tracking-normal leading-relaxed mt-10">
+            <p className=" tracking-normal leading-relaxed mt-6 text-md">
               {card.description}
             </p>
-            <p className=" tracking-normal leading-relaxed mt-5">{card.tech}</p>
+            <p className=" tracking-normal leading-relaxed textarea-md mt-5">
+              {card.tech}
+            </p>
 
             <div className="card-actions justify-start mt-10">
               <Image
@@ -118,7 +120,7 @@ const ProjectCards = () => {
                 alt="icon"
                 width={20}
                 height={20}
-                className="min-w-[20px] min-h-[20px] fill-white"
+                className="min-w-[20px] min-h-[20px] fill-white contrast-75"
               />
               <a href={card.preview}>{card.prev}</a>
 
@@ -127,7 +129,7 @@ const ProjectCards = () => {
                 alt="icon"
                 width={20}
                 height={20}
-                className="min-w-[20px] min-h-[20px] fill-white ml-20"
+                className="min-w-[20px] min-h-[20px] fill-white ml-20 contrast-75"
               />
               <a href={card.view}>{card.vieww}</a>
             </div>

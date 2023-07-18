@@ -80,21 +80,21 @@ const Menos = () => {
     },
   ].map(function (result) {
     return (
-      <li key={result.id} className="basis-1/12 align-middle">
+      <li key={result.id} className="sm:basis-1/12 basis-1/5 align-middle">
         <Image
           src={result.img}
           alt="icon"
           width={120}
           height={120}
-          className="min-w-[120px] min-h-[120px] contrast-75"
+          className="sm:min-w-[120px] sm:min-h-[120px] min-w-[30px] min-h-[30px] contrast-75"
         />
       </li>
     );
   });
 
   return (
-    <div id="icons" className="mt-28 space-y-8 justify-center">
-      <ul className="flex flex-wrap flex-grow gap-x-24 gap-y-40 w-full">
+    <div id="icons" className="sm:mt-28 mt-20  justify-center">
+      <ul className="flex flex-wrap flex-grow sm:gap-x-24 gap-x-5 sm:gap-y-40 gap-y-10 w-full ml-2">
         {links}
       </ul>
     </div>

@@ -35,7 +35,7 @@ const education: IExperienceCard[] = [
 
 const About = () => {
   return (
-    <div className=" gap-x-12 mt-28 gap-y-16 ">
+    <div className=" gap-x-12 mt-28 gap-y-16 ml-5 sm:ml-0 ">
       <ExperienceInfo experiences={experience} mainTitle="Experience" />
       <ExperienceInfo experiences={education} mainTitle="Education" />
     </div>

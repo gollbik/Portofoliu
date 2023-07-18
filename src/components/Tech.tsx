@@ -2,14 +2,17 @@ import React from "react";
 
 const Tech = () => {
   return (
-    <div id="tech" className="flex-col justify-center mt-72 space-y-8">
+    <div
+      id="tech"
+      className="flex-col justify-center sm:mt-72 mt-16 sm:space-y-8 space-y-4 mt:-10"
+    >
       <div className="flex justify-center">
-        <p className="text-5xl  tracking-wider">
+        <p className="sm:text-5xl text-xl  ">
           <strong>My Tech Stack</strong>
         </p>
       </div>
       <div className="flex justify-center ">
-        <p className="text-3xl  tracking-wider">
+        <p className="sm:text-3xl text-md ">
           Technologies I&apos;ve been working with recently
         </p>
       </div>

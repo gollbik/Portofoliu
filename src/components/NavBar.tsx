@@ -50,7 +50,12 @@ const NavBar = ({ theme }: { theme?: string }) => {
     },
   ].map(function (result) {
     return (
-      <li key={result.id} className="flex w-max h-7 align-middle">
+      <li
+        key={result.id}
+        className={`h-7 align-middle justify-end flex ${
+          ["fb", "tl", "ig"].includes(result.id) ? "hidden sm:flex" : ""
+        } `}
+      >
         <Link
           href={result.a}
           prefetch
@@ -65,7 +70,7 @@ const NavBar = ({ theme }: { theme?: string }) => {
               alt="icon"
               width={30}
               height={30}
-              className="min-w-[30px] min-h-[30px] fill-white"
+              className="min-w-[30px] min-h-[30px] fill-white hidden sm:block"
             />
           )}
         </Link>
@@ -74,9 +79,49 @@ const NavBar = ({ theme }: { theme?: string }) => {
   });
 
   return (
-    <nav className="flex">
-      <ThemeSwitcher theme={theme} />
-      <ul className="flex items-center ml-auto w-full justify-end">{links}</ul>
+    <nav className="flex w-full ">
+      <div className="hidden sm:block">
+        <ThemeSwitcher theme={theme} />
+      </div>
+      <div className="navbar flex sm:hidden bg-base-100">
+        <div className=" navbar-start">
+          <div className="dropdown">
+            <label tabIndex={0} className="btn btn-ghost btn-circle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h7"
+                />
+              </svg>
+            </label>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              {links}
+              <div className="divider"></div>
+              <li>
+                <ThemeSwitcher />
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="navbar-center">
+          <a className="btn btn-ghost normal-case text-xl">RAWR</a>
+        </div>
+        <div className="navbar-end"></div>
+      </div>
+      <ul className="hidden md:flex items-center ml-auto w-full justify-between sm:justify-end">
+        {links}
+      </ul>
     </nav>
   );
 };
