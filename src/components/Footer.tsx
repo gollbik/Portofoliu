@@ -85,7 +85,7 @@ const Footer = () => {
     },
   ].map(function (rez) {
     return (
-      <li key={rez.id} className="flex w-max h-7 align-middle ">
+      <li key={rez.id} className="flex h-7 align-middle ">
         <Link
           href={rez.a}
           prefetch
@@ -106,7 +106,7 @@ const Footer = () => {
   });
 
   return (
-    <footer className="footer p-10 bg-base-300 text-base-content sm:mt-64 mt-28">
+    <footer className="footer max-w-min overflow-hidden p-10 bg-base-300 text-base-content sm:mt-64 mt-28">
       <div>
         <span className="footer-title">Menu</span>
         {secondaryLinks}

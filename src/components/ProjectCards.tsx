@@ -94,7 +94,7 @@ const ProjectCards = () => {
   return (
     <div className="grid grid-cols-1 gap-x-12 md:grid-cols-2 lg:grid-cols-3 sm:mt-28 mt-20 gap-y-16 ">
       {cardData.map((card) => (
-        <div key={card.id} className="card w-96 bg-base-100 shadow-xl">
+        <div key={card.id} className="card w-full bg-base-100 shadow-xl">
           <figure>
             <Image
               src={card.image}

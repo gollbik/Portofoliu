@@ -94,7 +94,7 @@ const Menos = () => {
 
   return (
     <div id="icons" className="sm:mt-28 mt-20  justify-center">
-      <ul className="flex flex-wrap flex-grow sm:gap-x-24 gap-x-5 sm:gap-y-40 gap-y-10 w-full ml-2">
+      <ul className="flex flex-wrap flex-grow sm:gap-x-24 gap-x-5 sm:gap-y-40 gap-y-10 max-w-full ml-2">
         {links}
       </ul>
     </div>

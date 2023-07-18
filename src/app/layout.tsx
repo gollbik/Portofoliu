@@ -1,4 +1,5 @@
 import "@/app/globals.css";
+import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
 import type { GetServerSidePropsContext, Metadata } from "next";
 import { Roboto } from "next/font/google";
