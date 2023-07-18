@@ -21,17 +21,17 @@ const Footer = () => {
     },
     {
       id: "ig",
-      a: "/",
+      a: "https://www.instagram.com/gollbik/",
       img: Ig,
     },
     {
       id: "fb",
-      a: "/",
+      a: "https://www.facebook.com/alexandrugolban2005/",
       img: Fb,
     },
     {
       id: "tl",
-      a: "/",
+      a: "https://twitter.com/RAWR11798270038",
       img: Twt,
     },
   ].map(function (result) {
@@ -102,11 +102,13 @@ const Footer = () => {
   });
 
   return (
-    <footer className="footer flex flex-col mt-56 mb-5">
-      <Image src={Logo2} alt="logo" />
-      <ul className="flex items-center w-full justify-end">{links}</ul>
+    <footer className="footer flex flex-col mt-56 ">
+      <div className="flex items-center w-full justify-end -mb-10">
+        <Image src={Logo2} alt="logo" />
+        <ul className="flex items-center w-full justify-end">{links}</ul>
+      </div>
       <div className="divider min-w-full bg-[rgb(204,37,180)]  h-[2px]"></div>
-      <ul className="flex items-start w-full justify-start mt-10 mb-10">
+      <ul className="flex items-start w-full justify-start -mt-5 mb-10">
         {secondaryLinks}
         <p className="flex justify-center ml-auto">
           Designed and built by Alex with Love & Coffee

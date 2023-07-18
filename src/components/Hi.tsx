@@ -12,7 +12,7 @@ const Hi = () => {
       </div>
       <div className="avatar ml-80 -mt-14">
         <div className="w-[380px] rounded-full overflow-hidden ring ring-[rgb(204,37,180)] ring-offset-base-100 ring-offset-2">
-          <Image src="/avatar.jpg" width={150} height={150} alt="wallpaper" />
+          <Image src="/avatar.jpg" width={300} height={300} alt="wallpaper" />
         </div>
       </div>
     </div>

@@ -1,12 +1,12 @@
 import React from "react";
-import Logo from "@public/logo.svg";
 import Image from "next/image";
 import Link from "next/link";
-import Git from "@public/git.svg";
 import Ig from "@public/ig.svg";
 import Fb from "@public/fb.svg";
 import Twt from "@public/twt.svg";
-const NavBar = () => {
+import ThemeSwitcher from "./ThemeSwitcher";
+
+const NavBar = ({ theme }: { theme?: string }) => {
   const links = [
     {
       id: "Home",
@@ -15,7 +15,7 @@ const NavBar = () => {
     },
     {
       id: "About",
-      a: "/",
+      a: "/about",
       name: "About",
     },
     {
@@ -35,17 +35,17 @@ const NavBar = () => {
     },
     {
       id: "ig",
-      a: "/",
+      a: "https://www.instagram.com/gollbik/",
       img: Ig,
     },
     {
       id: "fb",
-      a: "/",
+      a: "https://www.facebook.com/alexandrugolban2005/",
       img: Fb,
     },
     {
       id: "tl",
-      a: "/",
+      a: "https://twitter.com/RAWR11798270038",
       img: Twt,
     },
   ].map(function (result) {
@@ -75,7 +75,7 @@ const NavBar = () => {
 
   return (
     <nav className="flex">
-      <Image src={Logo} alt="logo" />
+      <ThemeSwitcher theme={theme} />
       <ul className="flex items-center ml-auto w-full justify-end">{links}</ul>
     </nav>
   );

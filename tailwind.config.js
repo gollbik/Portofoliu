@@ -5,18 +5,8 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  plugins: [require("daisyui")],
+  plugins: [require("daisyui"), require("autoprefixer")],
   daisyui: {
-    themes: [
-      "light",
-      "dark",
-      "cupcake",
-      "cyberpunk",
-      "dracula",
-      "lofi",
-      "forest",
-      "night",
-      "retro",
-    ],
+    themes: ["lofi", "night"],
   },
 };

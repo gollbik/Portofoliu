@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.content-success,
+.content-success:hover {
+    background-color: #D7FFE0;
+    color: #018C0F;
+}
