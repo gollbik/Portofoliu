@@ -34,8 +34,9 @@ const ThemeSwitcher = ({ theme }: { theme?: string }) => {
     <label onClick={handleSwitchTheme} className="swap swap-rotate">
       {/* this hidden checkbox controls the state */}
       <input
+        onChange={handleSwitchTheme}
         ref={themeInput}
-        checked={currentTheme === "lofi"}
+        defaultChecked={currentTheme === "lofi"}
         type="checkbox"
         className="hidden"
       />
