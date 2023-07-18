@@ -104,7 +104,6 @@ const Footer = () => {
   return (
     <footer className="footer flex flex-col mt-56 ">
       <div className="flex items-center w-full justify-end -mb-10">
-        <Image src={Logo2} alt="logo" />
         <ul className="flex items-center w-full justify-end">{links}</ul>
       </div>
       <div className="divider min-w-full bg-[rgb(204,37,180)]  h-[2px]"></div>
