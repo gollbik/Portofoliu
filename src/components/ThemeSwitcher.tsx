@@ -28,7 +28,7 @@ const ThemeSwitcher = ({ theme }: { theme?: string }) => {
 
   useEffect(() => {
     setHtmlTheme();
-  }, [currentTheme]);
+  }, [currentTheme, setHtmlTheme]);
 
   return (
     <label

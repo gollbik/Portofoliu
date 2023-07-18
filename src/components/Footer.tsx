@@ -18,7 +18,11 @@ const Footer = () => {
       name: "golbanalexandru2005@gmail.com",
     },
   ].map(function (result) {
-    return <li className="flex w-max h-7 align-middle ">{result.name}</li>;
+    return (
+      <li key={result.id} className="flex w-max h-7 align-middle ">
+        {result.name}
+      </li>
+    );
   });
 
   const secondaryLinks = [
@@ -81,7 +85,7 @@ const Footer = () => {
     },
   ].map(function (rez) {
     return (
-      <li className="flex w-max h-7 align-middle ">
+      <li key={rez.id} className="flex w-max h-7 align-middle ">
         <Link
           href={rez.a}
           prefetch
