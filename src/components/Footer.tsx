@@ -106,7 +106,7 @@ const Footer = () => {
   });
 
   return (
-    <footer className="footer max-w-min overflow-hidden p-10 bg-base-300 text-base-content sm:mt-64 mt-28">
+    <footer className="footer max-w-full ml-auto overflow-hidden p-10 bg-base-300 text-base-content sm:mt-64 mt-28">
       <div>
         <span className="footer-title">Menu</span>
         {secondaryLinks}
