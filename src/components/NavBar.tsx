@@ -53,7 +53,7 @@ const NavBar = ({ theme }: { theme?: string }) => {
       <li
         key={result.id}
         className={`h-7 align-middle justify-end flex ${
-          ["fb", "tl", "ig"].includes(result.id) ? "hidden sm:flex" : ""
+          ["fb", "tl", "ig"].includes(result.id) ? "hidden xl:flex" : ""
         } `}
       >
         <Link
@@ -70,7 +70,7 @@ const NavBar = ({ theme }: { theme?: string }) => {
               alt="icon"
               width={30}
               height={30}
-              className="min-w-[30px] min-h-[30px] fill-white hidden sm:block"
+              className="min-w-[30px] min-h-[30px] fill-white hidden lg:block"
             />
           )}
         </Link>
@@ -80,16 +80,16 @@ const NavBar = ({ theme }: { theme?: string }) => {
 
   return (
     <nav className="flex w-full ">
-      <div className="hidden sm:block">
+      <div className="hidden lg:block">
         <ThemeSwitcher theme={theme} />
       </div>
-      <div className="navbar flex sm:hidden bg-base-100">
-        <div className=" navbar-start">
+      <div className="navbar flex lg:hidden bg-base-100">
+        <div className="navbar-start flex justify-start">
           <div className="dropdown">
-            <label tabIndex={0} className="btn btn-ghost btn-circle">
+            <label tabIndex={0} className="btn btn-ghost btn-circle ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                className="h-12 w-12"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -104,7 +104,7 @@ const NavBar = ({ theme }: { theme?: string }) => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 "
             >
               {links}
               <div className="divider"></div>
@@ -115,11 +115,11 @@ const NavBar = ({ theme }: { theme?: string }) => {
           </div>
         </div>
         <div className="navbar-center">
-          <a className="btn btn-ghost normal-case text-xl">RAWR</a>
+          <a className="btn btn-ghost normal-case sm:text-3xl text-2xl">RAWR</a>
         </div>
         <div className="navbar-end"></div>
       </div>
-      <ul className="hidden md:flex items-center ml-auto w-full justify-between sm:justify-end">
+      <ul className="hidden lg:flex items-start ml-auto w-full justify-between lg:justify-end">
         {links}
       </ul>
     </nav>

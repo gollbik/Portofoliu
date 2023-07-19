@@ -80,13 +80,16 @@ const Menos = () => {
     },
   ].map(function (result) {
     return (
-      <li key={result.id} className="sm:basis-1/12 basis-1/5 align-middle">
+      <li
+        key={result.id}
+        className="sm:basis-1/5 md:basis-1/12  basis-1/5 align-middle"
+      >
         <Image
           src={result.img}
           alt="icon"
           width={120}
           height={120}
-          className="sm:min-w-[120px] sm:min-h-[120px] min-w-[30px] min-h-[30px] contrast-75"
+          className="md:min-w-[50px] md:min-h-[50px]  xl:min-w-[100px] xl:min-h-[100px] 2xl:min-w-[120px] 2xl:min-h-[120px] min-w-[30px] min-h-[30px] contrast-75"
         />
       </li>
     );
@@ -94,7 +97,7 @@ const Menos = () => {
 
   return (
     <div id="icons" className="sm:mt-28 mt-20  justify-center">
-      <ul className="flex flex-wrap flex-grow sm:gap-x-24 gap-x-5 sm:gap-y-40 gap-y-10 max-w-full ml-2">
+      <ul className="flex flex-wrap flex-grow md:gap-x-16 lg:gap-x-20 2xl:gap-x-24 gap-x-5 md:gap-y-10 lg:gap-y-10 xl:gap-y-24 2xl:gap-y-40 gap-y-10 max-w-full ml-2">
         {links}
       </ul>
     </div>

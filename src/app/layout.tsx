@@ -21,7 +21,9 @@ export default function RootLayout({
 
   return (
     <html lang="en" data-theme={theme?.value}>
-      <body className={`${roboto.className} sm:px-[20.5rem] pt-2 sm:pt-8`}>
+      <body
+        className={`${roboto.className} 2xl:px-[20.5rem] xl:px-[5rem] md:px-[2rem] pt-2 lg:pt-8`}
+      >
         <NavBar theme={theme?.value} />
         {children}
       </body>

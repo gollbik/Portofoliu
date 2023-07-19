@@ -117,7 +117,9 @@ const Footer = () => {
       </div>
       <div>
         <span className="footer-title">Social</span>
-        <div className="grid grid-flow-col gap-4">{media}</div>
+        <div className="grid md:grid-flow-row lg:grid-flow-col grid-flow-col gap-4">
+          {media}
+        </div>
       </div>
     </footer>
   );

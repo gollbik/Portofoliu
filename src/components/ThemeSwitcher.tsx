@@ -46,7 +46,7 @@ const ThemeSwitcher = ({ theme }: { theme?: string }) => {
 
       {/* sun icon */}
       <svg
-        className="swap-on fill-current w-6 sm:w-10 md:h-10"
+        className="swap-on fill-current w-6 lg:w-10 md:h-10"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
       >
@@ -55,7 +55,7 @@ const ThemeSwitcher = ({ theme }: { theme?: string }) => {
 
       {/* moon icon */}
       <svg
-        className="swap-off fill-current  w-5 sm:w-10"
+        className="swap-off fill-current  w-5 lg:w-10"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
       >

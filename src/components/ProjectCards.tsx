@@ -129,7 +129,7 @@ const ProjectCards = () => {
                 alt="icon"
                 width={20}
                 height={20}
-                className="min-w-[20px] min-h-[20px] fill-white ml-20 contrast-75"
+                className="min-w-[20px] min-h-[20px] fill-white  ml-auto contrast-75"
               />
               <a href={card.view}>{card.vieww}</a>
             </div>
