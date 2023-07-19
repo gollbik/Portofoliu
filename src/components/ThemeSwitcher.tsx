@@ -1,6 +1,6 @@
 "use client";
-import { setCookie } from "cookies-next";
-import React, { useEffect, useRef, useState } from "react";
+import { getCookie, setCookie } from "cookies-next";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 
 const ThemeSwitcher = ({ theme }: { theme?: string }) => {
   const initialTheme = typeof theme === "string" ? theme : "night";
@@ -20,15 +20,18 @@ const ThemeSwitcher = ({ theme }: { theme?: string }) => {
     setHtmlTheme();
   };
 
-  const setHtmlTheme = () => {
+  const setHtmlTheme = useCallback(() => {
+    const themeFromCookies = getCookie("theme");
+    const theme =
+      typeof themeFromCookies === "string" ? themeFromCookies : "night";
     const htmlElement = document.getElementsByTagName("html")[0];
 
-    htmlElement.setAttribute("data-theme", currentTheme);
-  };
+    htmlElement.setAttribute("data-theme", theme);
+  }, []);
 
   useEffect(() => {
     setHtmlTheme();
-  }, [currentTheme, setHtmlTheme]);
+  }, [setHtmlTheme]);
 
   return (
     <label
